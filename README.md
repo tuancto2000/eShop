@@ -14,6 +14,10 @@
 ### Migration Database
  1) Tools --> NuGet Pakage Manager --> Pakage Manager Console
  2) Defaut project = eShop.Data
- 3) Add-Migration Initial
+ 3) Add-Migration [name migration]
  4) update-database
+
+### Seeding data 
+ - ModelBuilderExtensions
+
 

@@ -1,6 +1,7 @@
 ﻿using eShop.Data.Configurations;
 using eShop.Data.Entities;
 using eShopSolution.Data.Extensions;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using System;
@@ -9,7 +10,7 @@ using System.Text;
 
 namespace eShop.Data.EF
 {
-    public class EShopDBContext : DbContext
+    public class EShopDBContext : IdentityDbContext
     {
         public EShopDBContext( DbContextOptions options) : base(options)
         {
