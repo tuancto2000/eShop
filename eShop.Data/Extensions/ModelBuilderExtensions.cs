@@ -49,7 +49,6 @@ namespace eShopSolution.Data.Extensions
                   new Product()
                   {
                       Id = 1,
-                      DateCreated = DateTime.Now,
                       OriginalPrice = 100000,
                       Price = 200000,
                       Stock = 0,
