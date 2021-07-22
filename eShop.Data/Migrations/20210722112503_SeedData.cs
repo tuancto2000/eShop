@@ -8,11 +8,20 @@ namespace eShop.Data.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AlterColumn<DateTime>(
+                name: "DateCreated",
+                table: "Products",
+                type: "datetime2",
+                nullable: false,
+                defaultValue: new DateTime(2021, 7, 22, 18, 25, 2, 549, DateTimeKind.Local).AddTicks(30),
+                oldClrType: typeof(DateTime),
+                oldType: "datetime2");
+
+            migrationBuilder.AlterColumn<DateTime>(
                 name: "OrderDate",
                 table: "Orders",
                 type: "datetime2",
                 nullable: false,
-                defaultValue: new DateTime(2021, 7, 20, 15, 58, 3, 33, DateTimeKind.Local).AddTicks(4791),
+                defaultValue: new DateTime(2021, 7, 22, 18, 25, 2, 557, DateTimeKind.Local).AddTicks(7601),
                 oldClrType: typeof(DateTime),
                 oldType: "datetime2",
                 oldDefaultValue: new DateTime(2021, 7, 20, 9, 21, 22, 834, DateTimeKind.Local).AddTicks(2466));
@@ -47,8 +56,8 @@ namespace eShop.Data.Migrations
 
             migrationBuilder.InsertData(
                 table: "Products",
-                columns: new[] { "Id", "DateCreated", "OriginalPrice", "Price" },
-                values: new object[] { 1, new DateTime(2021, 7, 20, 15, 58, 3, 46, DateTimeKind.Local).AddTicks(7360), 100000m, 200000m });
+                columns: new[] { "Id", "OriginalPrice", "Price" },
+                values: new object[] { 1, 100000m, 200000m });
 
             migrationBuilder.InsertData(
                 table: "CategoryTranslations",
@@ -154,6 +163,15 @@ namespace eShop.Data.Migrations
                 keyValue: 1);
 
             migrationBuilder.AlterColumn<DateTime>(
+                name: "DateCreated",
+                table: "Products",
+                type: "datetime2",
+                nullable: false,
+                oldClrType: typeof(DateTime),
+                oldType: "datetime2",
+                oldDefaultValue: new DateTime(2021, 7, 22, 18, 25, 2, 549, DateTimeKind.Local).AddTicks(30));
+
+            migrationBuilder.AlterColumn<DateTime>(
                 name: "OrderDate",
                 table: "Orders",
                 type: "datetime2",
@@ -161,7 +179,7 @@ namespace eShop.Data.Migrations
                 defaultValue: new DateTime(2021, 7, 20, 9, 21, 22, 834, DateTimeKind.Local).AddTicks(2466),
                 oldClrType: typeof(DateTime),
                 oldType: "datetime2",
-                oldDefaultValue: new DateTime(2021, 7, 20, 15, 58, 3, 33, DateTimeKind.Local).AddTicks(4791));
+                oldDefaultValue: new DateTime(2021, 7, 22, 18, 25, 2, 557, DateTimeKind.Local).AddTicks(7601));
         }
     }
 }

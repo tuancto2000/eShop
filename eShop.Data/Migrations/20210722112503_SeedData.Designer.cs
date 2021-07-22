@@ -10,7 +10,7 @@ using eShop.Data.EF;
 namespace eShop.Data.Migrations
 {
     [DbContext(typeof(EShopDBContext))]
-    [Migration("20210720085803_SeedData")]
+    [Migration("20210722112503_SeedData")]
     partial class SeedData
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -296,7 +296,7 @@ namespace eShop.Data.Migrations
                     b.Property<DateTime>("OrderDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2021, 7, 20, 15, 58, 3, 33, DateTimeKind.Local).AddTicks(4791));
+                        .HasDefaultValue(new DateTime(2021, 7, 22, 18, 25, 2, 557, DateTimeKind.Local).AddTicks(7601));
 
                     b.Property<string>("ShipAddress")
                         .IsRequired()
@@ -361,7 +361,9 @@ namespace eShop.Data.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<DateTime>("DateCreated")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValue(new DateTime(2021, 7, 22, 18, 25, 2, 549, DateTimeKind.Local).AddTicks(30));
 
                     b.Property<decimal>("OriginalPrice")
                         .HasColumnType("decimal(18,2)");
@@ -387,7 +389,7 @@ namespace eShop.Data.Migrations
                         new
                         {
                             Id = 1,
-                            DateCreated = new DateTime(2021, 7, 20, 15, 58, 3, 46, DateTimeKind.Local).AddTicks(7360),
+                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             OriginalPrice = 100000m,
                             Price = 200000m,
                             Stock = 0,
