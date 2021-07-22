@@ -10,7 +10,7 @@ using System.Text;
 
 namespace eShop.Data.EF
 {
-    public class EShopDBContext : IdentityDbContext
+    public class EShopDBContext : DbContext
     {
         public EShopDBContext( DbContextOptions options) : base(options)
         {
