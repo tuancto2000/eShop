@@ -19,5 +19,7 @@
 
 ### Seeding data 
  - ModelBuilderExtensions
+### Add swagger
+ - https://bekenty.com/add-swagger-to-your-web-api-in-asp-net-core-3/
 
 
